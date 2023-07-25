@@ -53,18 +53,18 @@ class Solution:
         
         action_dict = {}
         
-        for i in range(num_players):
+        for i in range(num_actions**num_players):
+            action_dict[i] =()
             for j in range(num_actions):
-                action = (i, j)
-                key = i * num_actions + j
-                action_dict[key] = action
-                action_dict[action] = key
-        
+                action_dict[i] += (i // (num_actions** j) % num_actions,)
+
+            action_dict[action_dict[i]] = i
         return action_dict
     
+
 def main():
     input1 = input()
-    input1= int(input1)
+    input1= int(input1) 
     input2= input()
     input2=int (input2)
     tc1 = Solution()

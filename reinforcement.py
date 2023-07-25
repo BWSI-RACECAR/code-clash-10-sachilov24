@@ -60,6 +60,8 @@ class Solution:
 
             action_dict[action_dict[i]] = i
         return action_dict
+    pass
+
     
 
 def main():

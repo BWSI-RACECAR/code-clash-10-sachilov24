@@ -46,27 +46,22 @@ Input: 3, 2 Output: {0: (0, 0, 0), (0, 0, 0): 0, 1: (1, 0, 0), (1, 0, 0): 1, 2: 
 
 class Solution:
     def create_action_dict(self, num_players, num_actions):
-        #type num: two integer values
-        #return type: int dictionary
-        
-        #TODO: Write code below to return a dictionary with the solution to the prompt.
-        
-        action_dict = {}
-        
-        for i in range(num_actions**num_players):
-            action_dict[i] =()
-            for j in range(num_actions):
-                action_dict[i] += (i // (num_actions** j) % num_actions,)
-
-            action_dict[action_dict[i]] = i
-        return action_dict
-    pass
-
+            dict = {}
+            for i in range((num_actions**num_players)):
+                dict[i] = ()
+                for j in range(num_players):
+                    dict[i] += (i// (num_actions**j) % num_actions,)
+                dict[dict[i]] = i
+            return dict
+            #type num: two integer values
+            #return type: int dictionary
+            
+            #TODO: Write code below to return a dictionary with the solution to the prompt.
+  
     
-
 def main():
     input1 = input()
-    input1= int(input1) 
+    input1= int(input1)
     input2= input()
     input2=int (input2)
     tc1 = Solution()
